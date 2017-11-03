@@ -3,18 +3,16 @@
 #include <stdio.h>
 
 int main() {
-	int c;
 
-	while ((c = getchar()) != EOF) {
-		if (c == ' ') {
-			while ((c = getchar()) == ' ') {
-			} // until c is blank do nothing then print blank in place of all the missed ones
-			putchar(' ');
-		
-			if (c == EOF) {
-				break;
-			}	
-		}
-	putchar(c);
+    int c;
+
+    while ((c = getchar()) != EOF) {
+	if (c == ' ') {
+	    while ((c = getchar()) == ' '); // until c is blank do nothing then print blank in place of all the missed ones
+	    putchar(' ');
+		if (c == EOF) 
+			break;
 	}
+    putchar(c);
+    }
 }
